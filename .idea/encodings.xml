@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/WebContent/Admin/Index/index.html" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/WebContent/WEB-INF/lib/spring-web-4.3.4.RELEASE.jar" charset="UTF-8" />
+  </component>
+</project>

@@ -1,5 +1,9 @@
 eclipse.preferences.version=1
 encoding//WebContent/Admin/Mode/css/global.css=UTF-8
+<<<<<<< HEAD
+=======
+encoding//src/com/pdf/factory/DaoFactory.java=gbk
+>>>>>>> 664323b8b4e19ac063b705e8eb4da7dd8a50ff68
 encoding//src/com/pdf/utils/TransactionUtil.java=UTF-8
 encoding//src/com/pdf/utils/Utils.java=UTF-8
 encoding//src/dbcpconfig.properties=UTF-8

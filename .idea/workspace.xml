@@ -10,7 +10,6 @@
       <change beforePath="$PROJECT_DIR$/src/com/pdf/andriod/servlet/orderServlet.java" afterPath="$PROJECT_DIR$/src/com/pdf/andriod/servlet/orderServlet.java" />
       <change beforePath="$PROJECT_DIR$/src/com/pdf/servlet/BaseServlet.java" afterPath="$PROJECT_DIR$/src/com/pdf/servlet/BaseServlet.java" />
       <change beforePath="$PROJECT_DIR$/src/com/pdf/servlet/FileUpload.java" afterPath="$PROJECT_DIR$/src/com/pdf/servlet/FileUpload.java" />
-      <change beforePath="$PROJECT_DIR$/src/dbcpconfig.properties" afterPath="$PROJECT_DIR$/src/dbcpconfig.properties" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -394,7 +393,7 @@
       <workItem from="1523588683122" duration="18000" />
       <workItem from="1524314309207" duration="2076000" />
       <workItem from="1526618487959" duration="542000" />
-      <workItem from="1527938572112" duration="114000" />
+      <workItem from="1527938572112" duration="440000" />
     </task>
     <task id="LOCAL-00001">
       <created>1515484643196</created>
@@ -414,7 +413,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52508000" />
+    <option name="totallyTimeSpent" value="52834000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1928" height="1088" extended-state="6" />

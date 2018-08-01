@@ -35,6 +35,8 @@ public class LoginServlet extends BaseServlet{
 			System.out.println("--------userId----"+user.getUser_id());
 			
 			HttpSession session = request.getSession();
+			if (session.getAttribute("user") != null)
+    			session.removeAttribute("user");
 			session.setAttribute("user", user);
 			jsonObject.put("user_id", user.getUser_id());
 			jsonObject.put("result", "µÇÂ½³É¹¦");
@@ -47,7 +49,6 @@ public class LoginServlet extends BaseServlet{
 			System.out.println("fail");
 		}
 		output(jsonObject);
-		
 	}
 	@SuppressWarnings("rawtypes")
 	public void logout(HttpServletRequest request,HttpServletResponse response) throws IOException{

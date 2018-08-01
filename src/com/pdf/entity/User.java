@@ -14,7 +14,13 @@ public class User {
 	private String color;
 	private int edit_id;
 	
-	
+	public User() {
+
+	}
+	public User(String account, String password) {
+		this.account = account;
+		this.password = password;
+	}
 	
 	
 	public int getEdit_id() {

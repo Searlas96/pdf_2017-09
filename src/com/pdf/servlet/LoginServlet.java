@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
@@ -22,34 +24,29 @@ import com.pdf.serviceImpl.UserServiceImpl;
 public class LoginServlet extends BaseServlet{
 	private static UserService userInstance = UserServiceImpl.getInstance();
 	
-	public void login(HttpServletRequest request,HttpServletResponse response) throws IOException{
-		String account = request.getParameter("account");
-		String password = request.getParameter("password");
-		User user = new User(); 
-		user.setAccount(account);
-		user.setPassword(password);
+	public void login() throws IOException{
+		String account = getReqParam("account");
+		String password = getReqParam("password");
+		User user = new User(account, password);
 		user = userInstance.Login(user);
 		System.out.println(user);
-		JsonObject json =new JsonObject();
+        JSONObject jsonObject = new JSONObject();
 		if(user != null){
 			System.out.println("--------userId----"+user.getUser_id());
 			
 			HttpSession session = request.getSession();
 			session.setAttribute("user", user);
-			json.addProperty("user_id", user.getUser_id());
-			json.addProperty("result", "登陆成功");
-			json.addProperty("flag", 1);
+			jsonObject.put("user_id", user.getUser_id());
+			jsonObject.put("result", "登陆成功");
+			jsonObject.put("flag", 1);
 			System.out.println("success");
-			json.add("data",new JsonParser().parse(new Gson().toJson(user)).getAsJsonObject());
+			jsonObject.put("data",JSON.toJSON(user));
 		}else{
-			json.addProperty("result", "用户名/密码错误或用户不存在");
-			json.addProperty("flag", 0);
+			jsonObject.put("result", "用户名/密码错误或用户不存在");
+			jsonObject.put("flag", 0);
 			System.out.println("fail");
 		}
-		PrintWriter out =response.getWriter();
-		out.println(json);
-		out.flush();
-		out.close();
+		output(jsonObject);
 		
 	}
 	@SuppressWarnings("rawtypes")

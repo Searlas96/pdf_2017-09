@@ -11,7 +11,8 @@ import com.pdf.utils.JdbcUtils_DBCP;
 public class LogDaoImpl implements LogDao{
 
 	private static QueryRunner runerQuery = new QueryRunner(JdbcUtils_DBCP.getDataSource());
-	
+
+
 	@Override
 	public boolean FileLog(String operate_desc, File file,String time) {
 		System.out.println("file--"+file);
